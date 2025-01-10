@@ -18,7 +18,11 @@
         </section>
       </section>
       <figure class="basis-2/5">
-        <img src="@/assets/images/valores.png" alt="" class="w-full" />
+        <img
+          src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/Valores_gti5x1.png"
+          alt=""
+          class="w-full"
+        />
       </figure>
     </section>
 
@@ -26,7 +30,7 @@
 
     <section class="py-12 flex justify-between gap-8 items-center">
       <figure class="w-1/3 h-full rounded-xl overflow-hidden">
-        <img src="@/assets/images/hero.jpg" alt="" />
+        <img src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/hero_vbzg9x.jpg" alt="" />
       </figure>
       <div class="w-1/2">
         <h2 class="text-5xl font-semibold text-primary">Sobre CISEF</h2>
@@ -46,7 +50,7 @@
         <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
           <h3 class="text-3xl font-semibold text-gray-100 z-10 relative">Fitosanidad</h3>
           <img
-            src="@/assets/images/fitosanidad.jpg"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
             alt=""
             class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
           />
@@ -54,7 +58,7 @@
         <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
           <h3 class="text-3xl font-semibold text-gray-100 z-10 relative">Inocuidad Agroalimentaria</h3>
           <img
-            src="@/assets/images/inocuidad.jpg"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
             alt=""
             class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
           />
@@ -62,7 +66,7 @@
         <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
           <h3 class="text-3xl font-semibold text-gray-100 z-10 relative">Sanidad Acuícola y Pesquera</h3>
           <img
-            src="@/assets/images/acuicola.png"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
             alt=""
             class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
           />
@@ -70,7 +74,7 @@
         <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
           <h3 class="text-3xl font-semibold text-gray-100 z-10 relative">Calidad de la Semilla</h3>
           <img
-            src="@/assets/images/semilla.jpg"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
             alt=""
             class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
           />

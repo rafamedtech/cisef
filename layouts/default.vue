@@ -5,7 +5,11 @@
     <header class="flex justify-between items-center h-24 z-20">
       <section class="h-full">
         <NuxtLink to="/">
-          <img src="@/assets/images/logo.jpeg" alt="" class="w-full h-full" />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/logo_zsl800.jpg"
+            alt=""
+            class="w-full h-full"
+          />
         </NuxtLink>
       </section>
       <nav class="flex md:space-x-4 items-center">
