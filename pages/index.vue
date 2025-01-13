@@ -219,7 +219,9 @@
         </UCard>
       </section>
       <section class="mt-8 flex justify-center">
-        <UButton to="/" color="green" size="lg" icon="i-heroicons-arrow-small-right">Agendar una cita</UButton>
+        <UButton to="/agendar-cita" color="green" size="lg" icon="i-heroicons-arrow-small-right"
+          >Agendar una cita</UButton
+        >
       </section>
     </section>
   </UContainer>
