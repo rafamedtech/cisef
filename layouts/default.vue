@@ -18,20 +18,22 @@
             <NuxtLink to="/">Inicio</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">Servicios</NuxtLink>
+            <NuxtLink to="/servicios">Servicios</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">Certificaciones</NuxtLink>
+            <NuxtLink to="/certificaciones">Certificaciones</NuxtLink>
           </li>
-          <li>
+          <!-- <li>
             <NuxtLink to="/">Sectores atendidos</NuxtLink>
-          </li>
+          </li> -->
           <li>
-            <NuxtLink to="/">Contacto</NuxtLink>
+            <NuxtLink to="/contacto">Contacto</NuxtLink>
           </li>
         </ul>
         <section class="flex items-center space-x-2">
-          <UButton to="/" color="green" icon="i-heroicons-calendar-days" size="lg">Agendar una cita</UButton>
+          <UButton to="/agendar-cita" color="green" icon="i-heroicons-calendar-days" size="lg"
+            >Agendar una cita</UButton
+          >
           <UButton to="/" color="green" icon="i-heroicons-bars-3-bottom-right" variant="outline" class="md:hidden" />
         </section>
       </nav>
