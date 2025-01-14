@@ -1,4 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const certificates = [
+  {
+    id: 1,
+    title: 'ISO 9001:2015',
+    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
+    image: '',
+  },
+  {
+    id: 2,
+    title: 'ISO 17025:2017',
+    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
+    image: '',
+  },
+  {
+    id: 3,
+    title: 'ISO 14001:2015',
+    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
+    image: '',
+  },
+  {
+    id: 4,
+    title: 'ISO 45001:2018',
+    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
+    image: '',
+  },
+];
+</script>
 
 <template>
   <UContainer>
@@ -11,10 +38,10 @@
           Brindamos servicios de diagnóstico confiables para el manejo eficiente de plagas y la calidad agroalimentaria.
         </p>
         <section class="flex gap-4">
-          <UButton to="/" color="green" variant="outline" size="lg" icon="i-heroicons-arrow-small-right"
+          <UButton to="/servicios" color="green" variant="outline" size="lg" icon="i-heroicons-arrow-small-right"
             >Nuestros servicios</UButton
           >
-          <UButton to="/" color="green" size="lg" icon="i-heroicons-phone-arrow-down-left">Contáctanos</UButton>
+          <UButton to="/contacto" color="green" size="lg" icon="i-heroicons-phone-arrow-down-left">Contáctanos</UButton>
         </section>
       </section>
       <figure class="basis-2/5">
@@ -106,7 +133,7 @@
       </section>
 
       <section class="flex justify-center mt-8">
-        <UButton to="/" color="green" size="lg" icon="i-heroicons-arrow-small-right"
+        <UButton to="/servicios" color="green" size="lg" icon="i-heroicons-arrow-small-right"
           >Conoce más sobre nuestros servicios</UButton
         >
       </section>
@@ -116,27 +143,27 @@
       <h2 class="md:text-5xl text-4xl font-semibold text-primary">¿Por qué elegir CISEF?</h2>
 
       <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
-        <UCard>
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:certificate-01" size="64" class="text-green-500" />
             <span class="text-2xl">Reconocimientos nacionales e internacionales</span>
           </section>
         </UCard>
 
-        <UCard>
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:dashboard-speed-01" size="64" class="text-green-500" />
             <span class="text-2xl">Resultados confiables y rápidos</span>
           </section>
         </UCard>
 
-        <UCard>
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:user-check-01" size="64" class="text-green-500" />
             <span class="text-2xl">Personal calificado y tecnología de vanguardia</span>
           </section>
         </UCard>
-        <UCard>
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:checkmark-square-03" size="64" class="text-green-500" />
             <span class="text-2xl">Transparencia e imparcialidad en los diagnósticos</span>
@@ -148,42 +175,29 @@
     <section class="py-12">
       <h2 class="md:text-5xl text-4xl font-semibold text-primary">Certificaciones y Reconocimientos</h2>
 
-      <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
-        <UCard>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/iso9001-2015_vzqz9v.jpg"
-            alt=""
-            class="w-full"
+      <div class="relative py-12 h-full">
+        <section class="absolute inset-0 flex justify-center items-center z-50">
+          <UButton size="lg" color="gray"><span class="text-5xl">Sección en construcción</span></UButton>
+        </section>
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-8 blur-sm">
+          <CertCard
+            v-for="cert in certificates"
+            :key="cert.id"
+            :title="cert.title"
+            :description="cert.description"
+            :image="cert.image"
           />
-        </UCard>
-        <UCard>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/iso17025-2017_wnzv9v.jpg"
-            alt=""
-            class="w-full"
-          />
-        </UCard>
-        <UCard>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/iso14001-2015_vzqz9v.jpg"
-            alt=""
-            class="w-full"
-          />
-        </UCard>
-        <UCard>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/iso45001-2018_vzqz9v.jpg"
-            alt=""
-            class="w-full"
-          />
-        </UCard>
-      </section>
+        </section>
+      </div>
     </section>
 
     <section class="py-12">
       <h2 class="md:text-5xl text-4xl font-semibold text-primary">Contáctanos</h2>
       <section class="flex flex-col md:flex-row justify-between mt-8 gap-8">
-        <UCard class="md:w-1/2">
+        <UCard
+          class="md:w-1/2"
+          :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }"
+        >
           <div class="flex flex-col gap-8">
             <section class="flex flex-col gap-2">
               <h3 class="text-2xl font-bold">Dirección</h3>
@@ -202,12 +216,19 @@
             </section>
           </div>
         </UCard>
-        <UCard class="md:w-1/2">
+        <UCard
+          class="md:w-1/2 overflow-hidden min-h-full"
+          :ui="{
+            background: 'bg-gradient-to-br from-blue-100 to-green-100',
+            body: { padding: '' },
+            shadow: 'shadow-lg',
+          }"
+        >
           <ClientOnly>
-            <div style="width: 100%">
+            <div class="w-full min-h-full h-full">
               <iframe
                 width="100%"
-                height="350"
+                height="400px"
                 frameborder="0"
                 scrolling="no"
                 marginheight="0"
@@ -219,9 +240,7 @@
         </UCard>
       </section>
       <section class="mt-8 flex justify-center">
-        <UButton to="/agendar-cita" color="green" size="lg" icon="i-heroicons-arrow-small-right"
-          >Agendar una cita</UButton
-        >
+        <UButton to="/agendar-cita" color="green" icon="i-heroicons-calendar-days" size="lg">Agendar una cita</UButton>
       </section>
     </section>
   </UContainer>
