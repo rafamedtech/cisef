@@ -18,7 +18,7 @@ function handleClick(link: any) {
 <template>
   <div class="p-4 bg-gradient-to-br from-blue-100 to-green-100 min-h-screen z-0">
     <header class="flex justify-between items-center h-24 z-20">
-      <section class="h-full">
+      <section class="w-auto h-full">
         <NuxtLink to="/">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
@@ -109,25 +109,36 @@ function handleClick(link: any) {
           </NuxtLink>
         </section>
         <nav>
-          <ul class="flex flex-col md:flex-row md:gap-4">
-            <li>
-              <NuxtLink to="/">Servicios</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/">Certificaciones</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/">Sectores atendidos</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/">Contacto</NuxtLink>
+          <ul class="flex flex-col md:flex-row md:gap-12">
+            <li v-for="link in links" :key="link.to">
+              <NuxtLink :to="link.to" :class="link.to === $route.path ? 'text-green-500 underline' : ''">{{
+                link.label
+              }}</NuxtLink>
             </li>
           </ul>
         </nav>
         <section class="flex items-center space-x-2">
-          <UButton to="/" icon="i-hugeicons-facebook-01" size="xl" variant="ghost" />
-          <UButton to="/" icon="i-hugeicons-instagram" size="xl" variant="ghost" />
-          <UButton to="/" icon="i-hugeicons-linkedin-01" size="xl" variant="ghost" />
+          <UButton
+            to="http://facebook.com/soycisef"
+            target="_blank"
+            icon="i-hugeicons-facebook-01"
+            size="xl"
+            variant="ghost"
+          />
+          <UButton
+            to="https://www.instagram.com/cisef.lab?igsh=MTExdGhlZW5tZnRpMg=="
+            target="_blank"
+            icon="i-hugeicons-instagram"
+            size="xl"
+            variant="ghost"
+          />
+          <UButton
+            to="http://linkedin.com/company/cisef-labs"
+            target="_blank"
+            icon="i-hugeicons-linkedin-01"
+            size="xl"
+            variant="ghost"
+          />
         </section>
       </footer>
     </UContainer>

@@ -56,7 +56,7 @@ const certificates = [
     <UDivider />
 
     <section class="py-12 flex flex-col md:flex-row justify-between gap-8 items-center">
-      <figure class="md:w-1/3 h-full rounded-xl overflow-hidden">
+      <figure class="md:w-1/3 h-full rounded-xl overflow-hidden shadow-pinterest">
         <img src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/hero_vbzg9x.jpg" alt="" />
       </figure>
       <div class="md:w-1/2">
@@ -143,27 +143,27 @@ const certificates = [
       <h2 class="md:text-5xl text-4xl font-semibold text-primary">¿Por qué elegir CISEF?</h2>
 
       <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:certificate-01" size="64" class="text-green-500" />
             <span class="text-2xl">Reconocimientos nacionales e internacionales</span>
           </section>
         </UCard>
 
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:dashboard-speed-01" size="64" class="text-green-500" />
             <span class="text-2xl">Resultados confiables y rápidos</span>
           </section>
         </UCard>
 
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:user-check-01" size="64" class="text-green-500" />
             <span class="text-2xl">Personal calificado y tecnología de vanguardia</span>
           </section>
         </UCard>
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }">
+        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
           <section class="flex flex-col gap-8 py-12">
             <Icon name="hugeicons:checkmark-square-03" size="64" class="text-green-500" />
             <span class="text-2xl">Transparencia e imparcialidad en los diagnósticos</span>
@@ -177,7 +177,7 @@ const certificates = [
 
       <div class="relative py-12 h-full">
         <section class="absolute inset-0 flex justify-center items-center z-50">
-          <UButton size="lg" color="gray"><span class="text-5xl">Sección en construcción</span></UButton>
+          <UButton size="lg" color="gray"><span class="text-2xl md:text-5xl">Sección en construcción</span></UButton>
         </section>
         <section class="grid grid-cols-1 md:grid-cols-4 gap-8 blur-sm">
           <CertCard
@@ -196,7 +196,7 @@ const certificates = [
       <section class="flex flex-col md:flex-row justify-between mt-8 gap-8">
         <UCard
           class="md:w-1/2"
-          :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-lg' }"
+          :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }"
         >
           <div class="flex flex-col gap-8">
             <section class="flex flex-col gap-2">
@@ -204,7 +204,7 @@ const certificates = [
               <p class="font-light">Francisco de Urdiñola No. 360, Saltillo, Coahuila, México. C.P. 25000.</p>
             </section>
             <section class="flex flex-col gap-2">
-              <h3 class="text-2xl font-bold">Teléfonos y correo</h3>
+              <h3 class="text-2xl font-bold">Teléfonos y correo electrónico</h3>
               <p class="font-light">Tel.: (844) 4-12-37-56, (844) 4-12-37-92, (844) 4-10-51-76</p>
               <p class="font-light">Lada sin costo: 01 800 714 99 79</p>
               <p class="font-light">Correo: atencion.aclientes@ciseflab.com.mx</p>
@@ -221,7 +221,7 @@ const certificates = [
           :ui="{
             background: 'bg-gradient-to-br from-blue-100 to-green-100',
             body: { padding: '' },
-            shadow: 'shadow-lg',
+            shadow: 'shadow-pinterest',
           }"
         >
           <ClientOnly>

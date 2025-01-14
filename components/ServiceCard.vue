@@ -9,7 +9,10 @@ defineProps<Props>();
 </script>
 
 <template>
-  <UCard class="relative overflow-hidden h-96 flex justify-center items-center p-2 group">
+  <UCard
+    class="relative overflow-hidden h-96 flex justify-center items-center p-2 group"
+    :ui="{ shadow: 'shadow-pinterest' }"
+  >
     <section class="z-10 relative">
       <h3 class="text-3xl md:text-5xl font-bold text-gray-100">{{ title }}</h3>
       <p class="text-gray-200 font-light md:text-xl">

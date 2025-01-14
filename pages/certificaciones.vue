@@ -35,7 +35,7 @@ const certificates = [
 
     <div class="relative py-12 h-full">
       <section class="absolute inset-0 flex justify-center items-center z-50">
-        <UButton size="lg" color="gray"><span class="text-5xl">Sección en construcción</span></UButton>
+        <UButton size="lg" color="gray"><span class="text-2xl md:text-5xl">Sección en construcción</span></UButton>
       </section>
       <section class="grid grid-cols-1 md:grid-cols-4 gap-8 blur-sm">
         <CertCard
