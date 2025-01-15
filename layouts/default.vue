@@ -18,7 +18,7 @@ function handleClick(link: any) {
 <template>
   <div class="p-4 bg-gradient-to-br from-blue-100 to-green-100 min-h-screen z-0">
     <header class="flex justify-between items-center h-24 z-20">
-      <section class="w-auto h-full">
+      <section class="w-20 h-full">
         <NuxtLink to="/">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
@@ -99,7 +99,7 @@ function handleClick(link: any) {
     <UDivider />
     <UContainer class="md:py-8 pt-8">
       <footer class="flex flex-col gap-4 md:flex-row justify-between items-center md:max-h-24 md:h-24 z-20">
-        <section class="h-24 md:h-full">
+        <section class="w-20 h-24 md:h-full">
           <NuxtLink to="/">
             <img
               src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
