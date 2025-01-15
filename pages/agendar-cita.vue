@@ -13,7 +13,7 @@ const fields = ref({
       <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">Agenda una cita con nosotros</h1>
     </section>
 
-    <section class="pt-24 pb-12 flex gap-8 justify-between">
+    <section class="pt-12 md:pt-24 pb-12 flex flex-col-reverse gap-8 justify-between">
       <UCard class="basis-2/5">
         <UForm :state="fields">
           <div class="flex flex-col gap-4">
@@ -36,7 +36,7 @@ const fields = ref({
           </section>
         </UForm>
       </UCard>
-      <figure class="basis-2/5">
+      <figure class="basis-2/5 pb-8 md:pb-0">
         <img
           src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/Valores_gti5x1.png"
           alt=""

@@ -13,7 +13,7 @@ const fields = ref({
       <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">Contáctanos</h1>
     </section>
 
-    <section class="py-12">
+    <section class="md:py-12">
       <section class="flex flex-col md:flex-row justify-between mt-8 gap-8">
         <UCard
           class="md:w-1/2"
