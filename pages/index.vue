@@ -83,6 +83,11 @@ useSeoMeta({
           Desde 1997, somos un laboratorio certificado por SADER que contribuye al manejo sostenible de plagas agrícolas
           y a la calidad agroalimentaria.
         </p>
+        <section class="mt-8">
+          <UButton to="/sobre-nosotros" color="green" size="lg" icon="i-heroicons-arrow-small-right"
+            >Conoce más sobre nosotros</UButton
+          >
+        </section>
       </div>
     </section>
 
@@ -206,7 +211,7 @@ useSeoMeta({
             body: { padding: '' },
           }"
         >
-          <p class="text-3xl leading-snug italic">
+          <p class="md:text-3xl text-xl leading-snug italic">
             En <span class="font-bold text-primary">CISEF</span>, entendemos las necesidades únicas de cada sector
             dentro de la cadena agroalimentaria.
           </p>
@@ -237,8 +242,8 @@ useSeoMeta({
 
       <p class="text-2xl text-primary font-bold mt-4">Nuestros servicios están dirigidos a:</p>
 
-      <section class="flex justify-between items-center gap-8 py-12">
-        <figure class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
+      <section class="flex flex-col md:flex-row md:justify-between md:items-center gap-8 py-12">
+        <figure class="md:w-1/2 grid grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
             alt=""
@@ -265,13 +270,15 @@ useSeoMeta({
             background: '',
             ring: '',
             shadow: '',
-            base: 'w-1/2 h-full min-h-full',
+            base: 'md:w-1/2 h-full min-h-full',
             body: { padding: '' },
           }"
         >
           <ul class="flex flex-col gap-8">
-            <li v-for="(sector, index) in sectors" :key="sector" class="flex items-center gap-4">
-              <Icon name="i-heroicons-check-circle" size="32" class="text-green-500" />
+            <li v-for="(sector, index) in sectors" :key="sector" class="flex items-center gap-2 md:gap-4">
+              <div class="shrink-0">
+                <Icon name="i-heroicons-check-circle" size="32" class="text-green-500" />
+              </div>
               <span class="text-xl">{{ sector }}</span>
             </li>
           </ul>
@@ -279,21 +286,85 @@ useSeoMeta({
       </section>
     </section>
 
-    <section class="py-12">
-      <h2 class="md:text-5xl text-4xl font-semibold text-primary">Certificaciones y Reconocimientos</h2>
+    <section class="md:py-12">
+      <section>
+        <h2 class="md:text-5xl text-4xl font-semibold text-primary">Nuestras Certificaciones</h2>
+        <p class="text-xl mt-4">Reconocimientos que respaldan nuestra calidad y confiabilidad</p>
+      </section>
 
       <div class="relative py-12 h-full">
-        <section class="absolute inset-0 flex justify-center items-center z-50">
-          <UButton size="lg" color="gray"><span class="text-2xl md:text-5xl">Sección en construcción</span></UButton>
+        <section class="grid grid-cols-1 gap-8">
+          <UCard
+            :ui="{
+              background: 'bg-gradient-to-br from-blue-100 to-green-100',
+              shadow: 'shadow-pinterest',
+              base: 'max-w-3xl mx-auto',
+            }"
+          >
+            <template #header>
+              <h3 class="md:text-3xl text-xl font-bold">Certificados nacionales e internacionales</h3>
+            </template>
+
+            <section class="flex flex-col md:flex-row md:justify-between gap-12">
+              <div class="">
+                <h4 class="font-bold text-primary text-center">SADER</h4>
+                <ul class="flex flex-col gap-8 pt-4">
+                  <li class="flex items-center gap-2">
+                    <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                    <section class="flex flex-col">
+                      <span class="font-bold text-xl">Bacteriología:</span>
+                      <span>LAB-260324-07-BACT-003</span>
+                    </section>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                    <section class="flex flex-col">
+                      <span class="font-bold text-xl">Micología:</span>
+                      <span>LAB-260324-07-MICO-003</span>
+                    </section>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                    <section class="flex flex-col">
+                      <span class="font-bold text-xl">Entomología:</span>
+                      <span>LAB-260324-07-ENTO-003</span>
+                    </section>
+                  </li>
+                </ul>
+              </div>
+              <div class="">
+                <h4 class="font-bold text-primary text-center">EMA</h4>
+                <ul class="flex flex-col gap-8 pt-4">
+                  <li class="flex items-center gap-2">
+                    <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                    <section class="flex flex-col">
+                      <span class="font-bold text-xl">Sanidad agropecuaria:</span>
+                      <span>SA-096-006/09</span>
+                    </section>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                    <section class="flex flex-col">
+                      <span class="font-bold text-xl">Alimentos:</span>
+                      <span>A-1512-136/22</span>
+                    </section>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="flex flex-col md:items-center gap-2 pt-12 md:pt-8">
+              <h4 class="text-center font-bold text-primary">INTERNACIONALES</h4>
+              <span class="flex items-center gap-2"
+                ><Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                NMX-EC-17025-IMNC-2018</span
+              >
+            </section>
+          </UCard>
         </section>
-        <section class="grid grid-cols-1 md:grid-cols-4 gap-8 blur-sm">
-          <CertCard
-            v-for="cert in certificates"
-            :key="cert.id"
-            :title="cert.title"
-            :description="cert.description"
-            :image="cert.image"
-          />
+        <section class="mt-8 flex justify-center">
+          <UButton to="/certificaciones" color="green" icon="i-heroicons-arrow-small-right" size="lg"
+            >Ver todas las certificaciones</UButton
+          >
         </section>
       </div>
     </section>

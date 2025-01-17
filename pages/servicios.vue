@@ -40,6 +40,9 @@ useSeoMeta({
   <UContainer>
     <section class="pt-12">
       <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">Conoce nuestros servicios</h1>
+      <p class="text-lg md:text-xl text-gray-600 mt-4">
+        Diagnósticos especializados para la sanidad y calidad agroalimentaria.
+      </p>
     </section>
 
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
