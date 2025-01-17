@@ -25,6 +25,24 @@ const certificates = [
     image: '',
   },
 ];
+
+const sectors = [
+  'Agricultores',
+  'Sociedades de producción rural',
+  'Empresas procesadoras de alimentos',
+  'Empresas orientadas a la industria de semillas',
+  'Importadores del sector agrícola y pecuario',
+  'Industria de los agroquímicos',
+];
+
+useSeoMeta({
+  title: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
+  description:
+    'Brindamos servicios de diagnóstico confiables para el manejo eficiente de plagas y la calidad agroalimentaria.',
+  ogDescription: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
+  ogImage: '',
+  ogTitle: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
+});
 </script>
 
 <template>
@@ -168,6 +186,95 @@ const certificates = [
             <Icon name="hugeicons:checkmark-square-03" size="64" class="text-green-500" />
             <span class="text-2xl">Transparencia e imparcialidad en los diagnósticos</span>
           </section>
+        </UCard>
+      </section>
+    </section>
+
+    <section class="py-12">
+      <section>
+        <h2 class="md:text-5xl text-4xl font-semibold text-primary">Sectores atendidos</h2>
+        <p class="text-xl mt-4">Soluciones específicas para cada área del sector agroalimentario</p>
+      </section>
+
+      <section class="flex justify-between items-center gap-8 py-12">
+        <UCard
+          :ui="{
+            background: '',
+            ring: '',
+            shadow: '',
+            base: 'w-1/2 h-full min-h-full',
+            body: { padding: '' },
+          }"
+        >
+          <p class="text-3xl leading-snug italic">
+            En <span class="font-bold text-primary">CISEF</span>, entendemos las necesidades únicas de cada sector
+            dentro de la cadena agroalimentaria.
+          </p>
+        </UCard>
+        <figure class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+        </figure>
+      </section>
+
+      <p class="text-2xl text-primary font-bold mt-4">Nuestros servicios están dirigidos a:</p>
+
+      <section class="flex justify-between items-center gap-8 py-12">
+        <figure class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
+            alt=""
+            class="object-cover min-h-full"
+          />
+        </figure>
+        <UCard
+          :ui="{
+            background: '',
+            ring: '',
+            shadow: '',
+            base: 'w-1/2 h-full min-h-full',
+            body: { padding: '' },
+          }"
+        >
+          <ul class="flex flex-col gap-8">
+            <li v-for="(sector, index) in sectors" :key="sector" class="flex items-center gap-4">
+              <Icon name="i-heroicons-check-circle" size="32" class="text-green-500" />
+              <span class="text-xl">{{ sector }}</span>
+            </li>
+          </ul>
         </UCard>
       </section>
     </section>

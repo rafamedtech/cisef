@@ -26,6 +26,14 @@ const services = [
     image: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg',
   },
 ];
+
+useSeoMeta({
+  title: 'Nuestros servicios | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+  description: 'Conoce los servicios que ofrecemos en CISEF',
+  ogDescription: 'Conoce los servicios que ofrecemos en CISEF',
+  ogImage: '',
+  ogTitle: 'Nuestros servicios | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+});
 </script>
 
 <template>

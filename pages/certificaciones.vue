@@ -25,6 +25,14 @@ const certificates = [
     image: '',
   },
 ];
+
+useSeoMeta({
+  title: 'Certificaciones y reconocimientos | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+  description: 'Certificaciones y reconocimientos de CISEF',
+  ogDescription: 'Certificaciones y reconocimientos de CISEF',
+  ogImage: '',
+  ogTitle: 'Certificaciones y reconocimientos | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+});
 </script>
 
 <template>

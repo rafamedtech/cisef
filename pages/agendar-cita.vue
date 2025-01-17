@@ -5,15 +5,24 @@ const fields = ref({
   phone: '',
   message: '',
 });
+
+useSeoMeta({
+  title: 'Agendar una cita | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+  description: 'Agenda una cita con nosotros',
+  ogDescription: 'Agenda una cita con nosotros',
+  ogImage: '',
+  ogTitle: 'Agendar una cita | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+});
 </script>
 
 <template>
   <UContainer class="min-h-full pb-12">
     <section class="pt-12">
       <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">Agenda una cita con nosotros</h1>
+      <p class="text-xl mt-4">Da el primer paso para que empecemos a trabajar juntos</p>
     </section>
 
-    <section class="pt-12 md:pt-24 pb-12 flex flex-col-reverse gap-8 justify-between">
+    <section class="pt-12 md:pt-24 pb-12 flex flex-col-reverse md:flex-row gap-8 justify-between">
       <UCard class="basis-2/5">
         <UForm :state="fields">
           <div class="flex flex-col gap-4">

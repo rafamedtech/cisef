@@ -1,9 +1,10 @@
 <script setup lang="ts">
-const fields = ref({
-  name: '',
-  email: '',
-  phone: '',
-  message: '',
+useSeoMeta({
+  title: 'Contacto | CISEF - Centro de Investigación y Servicios en Fitosanidad',
+  description: 'Contacta a CISEF',
+  ogDescription: 'Contacta a CISEF',
+  ogImage: '',
+  ogTitle: 'Contacto | CISEF - Centro de Investigación y Servicios en Fitosanidad',
 });
 </script>
 
@@ -11,6 +12,7 @@ const fields = ref({
   <UContainer class="min-h-full pb-12">
     <section class="pt-12">
       <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">Contáctanos</h1>
+      <p class="text-xl mt-4">Conoce nuestra información de contacto</p>
     </section>
 
     <section class="md:py-12">
