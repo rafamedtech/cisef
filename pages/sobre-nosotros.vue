@@ -16,8 +16,18 @@ useSeoMeta({
       <p class="text-xl mt-4">Comprometidos con la sanidad vegetal y la calidad agroalimentaria desde 1997</p>
     </section>
 
+    <section class="py-10">
+      <figure class="md:h-1/2 md:w-1/2 mx-auto rounded-xl overflow-hidden shadow-pinterest">
+        <img
+          src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/hero_vbzg9x.jpg"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+    </section>
+
     <!-- Introducción -->
-    <section class="introduccion mx-auto py-10">
+    <section class="mx-auto md:py-10 pb-10">
       <p class="text-lg leading-relaxed">
         El Centro Internacional de Servicios Fitosanitarios (CISEF) es un laboratorio de diagnóstico certificado que
         brinda soluciones innovadoras para el sector agroalimentario. Desde nuestra fundación en 1997, hemos trabajado
@@ -90,7 +100,7 @@ useSeoMeta({
           Contamos con acreditaciones como NMX-EC-17025-IMNC-2018 y las cédulas de SADER, que respaldan la calidad y
           confiabilidad de nuestros diagnósticos.
         </p>
-        <section class="flex justify-center">
+        <section class="flex justify-center pt-8">
           <UButton to="/certificaciones" color="green" icon="i-heroicons-arrow-small-right" size="lg"
             >Ver todas las certificaciones</UButton
           >

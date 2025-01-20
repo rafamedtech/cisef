@@ -18,7 +18,7 @@ function handleClick(link: any) {
 <template>
   <div class="p-4 bg-gradient-to-br from-blue-100 to-green-100 min-h-screen z-0">
     <header class="flex justify-between items-center h-24 z-20">
-      <section class="w-20 h-full">
+      <section class="w-20 md:w-16 h-full">
         <NuxtLink to="/">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
@@ -99,7 +99,7 @@ function handleClick(link: any) {
     <UDivider />
     <UContainer class="md:py-8 pt-8">
       <footer class="flex flex-col gap-4 md:flex-row justify-between items-center md:max-h-24 md:h-24 z-20">
-        <section class="w-20 h-24 md:h-full">
+        <section class="w-20 md:w-16 h-24 md:h-full">
           <NuxtLink to="/">
             <img
               src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
@@ -111,7 +111,7 @@ function handleClick(link: any) {
         <nav>
           <ul class="flex flex-col md:flex-row md:gap-12">
             <li v-for="link in links" :key="link.to">
-              <NuxtLink :to="link.to" :class="link.to === $route.path ? 'text-green-500 underline' : ''">{{
+              <NuxtLink :to="link.to" :class="{ 'text-primary underline': link.to === $route.path }">{{
                 link.label
               }}</NuxtLink>
             </li>
