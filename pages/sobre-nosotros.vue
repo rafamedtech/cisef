@@ -38,7 +38,7 @@ useSeoMeta({
     <!-- Historia y Origen -->
     <section class="md:py-10">
       <div class="mx-auto">
-        <h2 class="text-2xl font-bold text-green-600">Nuestra Historia</h2>
+        <h2 class="text-2xl font-bold text-primary">Nuestra Historia</h2>
         <p class="mt-4 text-lg leading-relaxed">
           Fundado en febrero de 1997, CISEF nació con el objetivo de atender la creciente necesidad de diagnósticos
           confiables en el sector agrícola. Estamos estratégicamente ubicados en Saltillo, Coahuila, una región clave
@@ -54,7 +54,7 @@ useSeoMeta({
         <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
           <section class="flex flex-col md:flex-row gap-8 py-8 px-6">
             <section>
-              <h2 class="text-2xl font-bold text-green-600">Misión</h2>
+              <h2 class="text-2xl font-bold text-primary">Misión</h2>
               <p class="mt-4 text-lg leading-relaxed">
                 Evaluar la calidad agroalimentaria y detectar oportunamente patógenos para apoyar la toma de decisiones
                 de nuestros clientes y autoridades nacionales e internacionales.
@@ -62,7 +62,7 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-2xl font-bold text-green-600">Visión</h2>
+              <h2 class="text-2xl font-bold text-primary">Visión</h2>
               <p class="mt-4 text-lg leading-relaxed">
                 Ser una empresa de vanguardia reconocida por mantener e incrementar acreditaciones nacionales e
                 internacionales, promoviendo la seguridad humana, la calidad y la protección al medio ambiente.
@@ -76,7 +76,7 @@ useSeoMeta({
           :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }"
         >
           <section class="py-8 px-6">
-            <h2 class="text-2xl font-bold text-green-600">Valores</h2>
+            <h2 class="text-2xl font-bold text-primary">Valores</h2>
             <ul class="mt-4 text-lg grid md:grid-cols-2 list-disc list-inside gap-2">
               <li>Responsabilidad</li>
               <li>Vanguardia</li>
@@ -95,7 +95,7 @@ useSeoMeta({
     <!-- Reconocimientos y Certificaciones -->
     <section class="py-10">
       <div class="mx-auto">
-        <h2 class="text-2xl font-bold text-green-600">Reconocimientos y Certificaciones</h2>
+        <h2 class="text-2xl font-bold text-primary">Reconocimientos y Certificaciones</h2>
         <p class="mt-4 text-lg leading-relaxed">
           Contamos con acreditaciones como NMX-EC-17025-IMNC-2018 y las cédulas de SADER, que respaldan la calidad y
           confiabilidad de nuestros diagnósticos.

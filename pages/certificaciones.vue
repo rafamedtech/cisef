@@ -55,8 +55,8 @@ useSeoMeta({
             <h3 class="md:text-3xl text-xl font-bold">Certificados nacionales e internacionales</h3>
           </template>
 
-          <section class="flex flex-col md:flex-row md:justify-between gap-12 md:py-12 md:px-6">
-            <div class="">
+          <section class="flex flex-col md:flex-row md:justify-between gap-8 md:py-12 md:px-6">
+            <UCard class="">
               <h4 class="font-bold text-primary text-center">SADER</h4>
               <ul class="flex flex-col gap-8 pt-4">
                 <li class="flex items-center gap-2">
@@ -81,8 +81,8 @@ useSeoMeta({
                   </section>
                 </li>
               </ul>
-            </div>
-            <div class="">
+            </UCard>
+            <UCard class="">
               <h4 class="font-bold text-primary text-center">EMA</h4>
               <ul class="flex flex-col gap-8 pt-4">
                 <li class="flex items-center gap-2">
@@ -100,14 +100,16 @@ useSeoMeta({
                   </section>
                 </li>
               </ul>
-            </div>
-            <section class="flex flex-col md:items-center gap-2">
-              <h4 class="text-center font-bold text-primary">INTERNACIONALES</h4>
-              <span class="flex items-center gap-2"
-                ><Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
-                NMX-EC-17025-IMNC-2018</span
-              >
-            </section>
+            </UCard>
+            <UCard>
+              <section class="flex flex-col md:items-center gap-2">
+                <h4 class="text-center font-bold text-primary">INTERNACIONALES</h4>
+                <span class="flex items-center gap-2"
+                  ><Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
+                  NMX-EC-17025-IMNC-2018</span
+                >
+              </section>
+            </UCard>
           </section>
         </UCard>
       </section>
