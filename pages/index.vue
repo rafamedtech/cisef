@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v';
+
 const certificates = [
   {
     id: 1,
@@ -48,55 +50,129 @@ useSeoMeta({
 <template>
   <UContainer>
     <section class="flex gap-8 md:gap-16 flex-col md:flex-row justify-between items-center min-h-[70vh] py-12">
-      <section class="flex flex-col gap-4 md:gap-8 md:basis-3/5">
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :animate="{ x: 0, opacity: 1 }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+        class="flex flex-col gap-4 md:gap-8 md:basis-3/5"
+        as="section"
+      >
         <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">
           Comprometidos con la sanidad vegetal y la seguridad agroalimentaria
         </h1>
         <p class="text-lg md:text-xl">
           Brindamos servicios de diagnóstico confiables para el manejo eficiente de plagas y la calidad agroalimentaria.
         </p>
-        <section class="flex gap-4">
+
+        <Motion
+          :initial="{
+            opacity: 0,
+          }"
+          :animate="{ opacity: 1 }"
+          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.5 }"
+          class="flex gap-4"
+          as="section"
+        >
           <UButton to="/servicios" color="green" variant="outline" size="lg" icon="i-heroicons-arrow-small-right"
             >Nuestros servicios</UButton
           >
           <UButton to="/contacto" color="green" size="lg" icon="i-heroicons-phone-arrow-down-left">Contáctanos</UButton>
-        </section>
-      </section>
-      <figure class="basis-2/5">
-        <img
-          src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/Valores_gti5x1.png"
-          alt=""
-          class="w-full"
-        />
-      </figure>
+        </Motion>
+      </Motion>
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :animate="{ y: 0, opacity: 1 }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+      >
+        <figure class="basis-2/5">
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/Valores_gti5x1.png"
+            alt=""
+            class="w-full"
+          />
+        </figure>
+      </Motion>
     </section>
 
     <UDivider />
 
     <section class="py-12 flex flex-col md:flex-row justify-between gap-8 items-center">
-      <figure class="md:w-1/3 h-full rounded-xl overflow-hidden shadow-pinterest">
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :in-view="{ y: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        class="md:w-1/3 h-full rounded-xl overflow-hidden shadow-pinterest"
+        as="figure"
+      >
         <img src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/hero_vbzg9x.jpg" alt="" />
-      </figure>
-      <div class="md:w-1/2">
+      </Motion>
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+        class="md:w-1/2"
+      >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Sobre CISEF</h2>
         <p class="text-xl mt-4">
           Desde 1997, somos un laboratorio certificado por SADER que contribuye al manejo sostenible de plagas agrícolas
           y a la calidad agroalimentaria.
         </p>
-        <section class="mt-8">
+        <Motion
+          :initial="{
+            opacity: 0,
+          }"
+          :in-view="{ opacity: 1 }"
+          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+          class="mt-8"
+          as="section"
+        >
           <UButton to="/sobre-nosotros" color="green" size="lg" icon="i-heroicons-arrow-small-right"
             >Conoce más sobre nosotros</UButton
           >
-        </section>
-      </div>
+        </Motion>
+      </Motion>
     </section>
 
     <UDivider />
 
     <section class="py-12">
-      <h2 class="md:text-5xl text-4xl font-semibold text-primary">Nuestros servicios</h2>
-      <p class="text-xl mt-4">Diagnósticos especializados para la sanidad y calidad agroalimentaria.</p>
-      <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+      >
+        <h2 class="md:text-5xl text-4xl font-semibold text-primary">Nuestros servicios</h2>
+        <p class="text-xl mt-4">Diagnósticos especializados para la sanidad y calidad agroalimentaria.</p>
+      </Motion>
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :in-view="{ y: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8"
+        as="section"
+      >
         <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
           <section class="z-10 relative">
             <h3 class="text-3xl font-bold text-gray-50">Fitosanidad</h3>
@@ -153,97 +229,164 @@ useSeoMeta({
             class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
           />
         </UCard>
-      </section>
+      </Motion>
 
-      <section class="flex justify-center mt-8">
+      <Motion
+        :initial="{
+          opacity: 0,
+        }"
+        :in-view="{ opacity: 1 }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+        class="flex justify-center mt-8"
+        as="section"
+      >
         <UButton to="/servicios" color="green" size="lg" icon="i-heroicons-arrow-small-right"
           >Conoce más sobre nuestros servicios</UButton
         >
-      </section>
+      </Motion>
     </section>
 
     <section class="py-12">
-      <h2 class="md:text-5xl text-4xl font-semibold text-primary">¿Por qué elegir CISEF?</h2>
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+      >
+        <h2 class="md:text-5xl text-4xl font-semibold text-primary">¿Por qué elegir CISEF?</h2>
+      </Motion>
 
-      <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-          <section class="flex flex-col gap-8 py-12">
-            <Icon name="hugeicons:certificate-01" size="64" class="text-green-500" />
-            <span class="text-2xl">Reconocimientos nacionales e internacionales</span>
-          </section>
-        </UCard>
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :in-view="{ y: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+      >
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
+            <section class="flex flex-col gap-8 py-12">
+              <Icon name="hugeicons:certificate-01" size="64" class="text-green-500" />
+              <span class="text-2xl">Reconocimientos nacionales e internacionales</span>
+            </section>
+          </UCard>
 
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-          <section class="flex flex-col gap-8 py-12">
-            <Icon name="hugeicons:dashboard-speed-01" size="64" class="text-green-500" />
-            <span class="text-2xl">Resultados confiables y rápidos</span>
-          </section>
-        </UCard>
+          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
+            <section class="flex flex-col gap-8 py-12">
+              <Icon name="hugeicons:dashboard-speed-01" size="64" class="text-green-500" />
+              <span class="text-2xl">Resultados confiables y rápidos</span>
+            </section>
+          </UCard>
 
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-          <section class="flex flex-col gap-8 py-12">
-            <Icon name="hugeicons:user-check-01" size="64" class="text-green-500" />
-            <span class="text-2xl">Personal calificado y tecnología de vanguardia</span>
-          </section>
-        </UCard>
-        <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-          <section class="flex flex-col gap-8 py-12">
-            <Icon name="hugeicons:checkmark-square-03" size="64" class="text-green-500" />
-            <span class="text-2xl">Transparencia e imparcialidad en los diagnósticos</span>
-          </section>
-        </UCard>
-      </section>
+          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
+            <section class="flex flex-col gap-8 py-12">
+              <Icon name="hugeicons:user-check-01" size="64" class="text-green-500" />
+              <span class="text-2xl">Personal calificado y tecnología de vanguardia</span>
+            </section>
+          </UCard>
+          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
+            <section class="flex flex-col gap-8 py-12">
+              <Icon name="hugeicons:checkmark-square-03" size="64" class="text-green-500" />
+              <span class="text-2xl">Transparencia e imparcialidad en los diagnósticos</span>
+            </section>
+          </UCard>
+        </section>
+      </Motion>
     </section>
 
     <section class="py-12">
-      <section>
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+        as="section"
+      >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Sectores atendidos</h2>
         <p class="text-xl mt-4">Soluciones específicas para cada área del sector agroalimentario</p>
-      </section>
+      </Motion>
 
-      <section class="flex justify-between items-center gap-8 py-12">
-        <UCard
-          :ui="{
-            background: '',
-            ring: '',
-            shadow: '',
-            base: 'w-1/2 h-full min-h-full',
-            body: { padding: '' },
-          }"
-        >
-          <p class="md:text-3xl text-xl leading-snug italic">
-            En <span class="font-bold text-primary">CISEF</span>, entendemos las necesidades únicas de cada sector
-            dentro de la cadena agroalimentaria.
-          </p>
-        </UCard>
-        <figure class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
-            alt=""
-            class="object-cover min-h-full"
-          />
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
-            alt=""
-            class="object-cover min-h-full"
-          />
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
-            alt=""
-            class="object-cover min-h-full"
-          />
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
-            alt=""
-            class="object-cover min-h-full"
-          />
-        </figure>
-      </section>
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :in-view="{ y: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+      >
+        <section class="flex justify-between items-center gap-8 py-12">
+          <UCard
+            :ui="{
+              background: '',
+              ring: '',
+              shadow: '',
+              base: 'w-1/2 h-full min-h-full',
+              body: { padding: '' },
+            }"
+          >
+            <p class="md:text-3xl text-xl leading-snug italic">
+              En <span class="font-bold text-primary">CISEF</span>, entendemos las necesidades únicas de cada sector
+              dentro de la cadena agroalimentaria.
+            </p>
+          </UCard>
+          <figure class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
+            <img
+              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
+              alt=""
+              class="object-cover min-h-full"
+            />
+            <img
+              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
+              alt=""
+              class="object-cover min-h-full"
+            />
+            <img
+              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
+              alt=""
+              class="object-cover min-h-full"
+            />
+            <img
+              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
+              alt=""
+              class="object-cover min-h-full"
+            />
+          </figure>
+        </section>
+      </Motion>
 
-      <p class="text-2xl text-primary font-bold mt-4">Nuestros servicios están dirigidos a:</p>
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+      >
+        <p class="text-2xl text-primary font-bold mt-4">Nuestros servicios están dirigidos a:</p>
+      </Motion>
 
       <section class="flex flex-col md:flex-row md:justify-between md:items-center gap-8 py-12">
-        <figure class="md:w-1/2 grid grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
+        <Motion
+          :initial="{
+            opacity: 0,
+            y: -150,
+          }"
+          :in-view="{ y: 0, opacity: 1 }"
+          :in-view-options="{ amount: 'all', once: true }"
+          :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+          class="md:w-1/2 grid grid-cols-2 rounded-xl overflow-hidden h-full min-h-full"
+          as="figure"
+        >
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
             alt=""
@@ -264,35 +407,65 @@ useSeoMeta({
             alt=""
             class="object-cover min-h-full"
           />
-        </figure>
-        <UCard
-          :ui="{
-            background: '',
-            ring: '',
-            shadow: '',
-            base: 'md:w-1/2 h-full min-h-full',
-            body: { padding: '' },
+        </Motion>
+        <Motion
+          :initial="{
+            opacity: 0,
+            x: -100,
           }"
+          :in-view="{ x: 0, opacity: 1 }"
+          :in-view-options="{ amount: 'all', once: true }"
+          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+          class="md:w-1/2 h-full min-h-full"
         >
-          <ul class="flex flex-col gap-8">
-            <li v-for="(sector, index) in sectors" :key="sector" class="flex items-center gap-2 md:gap-4">
-              <div class="shrink-0">
-                <Icon name="i-heroicons-check-circle" size="32" class="text-green-500" />
-              </div>
-              <span class="text-xl">{{ sector }}</span>
-            </li>
-          </ul>
-        </UCard>
+          <UCard
+            :ui="{
+              background: '',
+              ring: '',
+              shadow: '',
+
+              body: { padding: '' },
+            }"
+          >
+            <ul class="flex flex-col gap-8">
+              <li v-for="(sector, index) in sectors" :key="sector" class="flex items-center gap-2 md:gap-4">
+                <div class="shrink-0">
+                  <Icon name="i-heroicons-check-circle" size="32" class="text-green-500" />
+                </div>
+                <span class="text-xl">{{ sector }}</span>
+              </li>
+            </ul>
+          </UCard>
+        </Motion>
       </section>
     </section>
 
     <section class="md:py-12">
-      <section>
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+        as="section"
+      >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Nuestras Certificaciones</h2>
         <p class="text-xl mt-4">Reconocimientos que respaldan nuestra calidad y confiabilidad</p>
-      </section>
+      </Motion>
 
-      <div class="relative py-12 h-full">
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :in-view="{ y: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        class="relative py-12 h-full"
+        as="section"
+      >
         <section class="grid grid-cols-1 gap-8">
           <UCard
             :ui="{
@@ -361,17 +534,46 @@ useSeoMeta({
             </section>
           </UCard>
         </section>
-        <section class="mt-8 flex justify-center">
+        <Motion
+          :initial="{
+            opacity: 0,
+          }"
+          :in-view="{ opacity: 1 }"
+          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+          class="mt-8 flex justify-center"
+          as="section"
+        >
           <UButton to="/certificaciones" color="green" icon="i-heroicons-arrow-small-right" size="lg"
             >Ver todas las certificaciones</UButton
           >
-        </section>
-      </div>
+        </Motion>
+      </Motion>
     </section>
 
     <section class="py-12">
-      <h2 class="md:text-5xl text-4xl font-semibold text-primary">Contáctanos</h2>
-      <section class="flex flex-col md:flex-row justify-between mt-8 gap-8">
+      <Motion
+        :initial="{
+          opacity: 0,
+          x: -100,
+        }"
+        :in-view="{ x: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
+        as="section"
+      >
+        <h2 class="md:text-5xl text-4xl font-semibold text-primary">Contáctanos</h2>
+      </Motion>
+      <Motion
+        :initial="{
+          opacity: 0,
+          y: -150,
+        }"
+        :in-view="{ y: 0, opacity: 1 }"
+        :in-view-options="{ amount: 'all', once: true }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        class="flex flex-col md:flex-row justify-between mt-8 gap-8"
+        as="section"
+      >
         <UCard
           class="md:w-1/2"
           :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }"
@@ -416,10 +618,18 @@ useSeoMeta({
             </div>
           </ClientOnly>
         </UCard>
-      </section>
-      <section class="mt-8 flex justify-center">
+      </Motion>
+      <Motion
+        :initial="{
+          opacity: 0,
+        }"
+        :in-view="{ opacity: 1 }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+        class="mt-8 flex justify-center"
+        as="section"
+      >
         <UButton to="/agendar-cita" color="green" icon="i-heroicons-calendar-days" size="lg">Agendar una cita</UButton>
-      </section>
+      </Motion>
     </section>
   </UContainer>
 </template>
