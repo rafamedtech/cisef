@@ -105,7 +105,7 @@ useSeoMeta({
             opacity: 0,
           }"
           :in-view="{ opacity: 1 }"
-          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
           class="mt-8"
           as="section"
         >
@@ -436,7 +436,7 @@ useSeoMeta({
             opacity: 0,
           }"
           :in-view="{ opacity: 1 }"
-          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+          :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
           class="mt-8 flex justify-center"
           as="section"
         >
@@ -526,7 +526,7 @@ useSeoMeta({
           opacity: 0,
         }"
         :in-view="{ opacity: 1 }"
-        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
         class="mt-8 flex justify-center"
         as="section"
       >
