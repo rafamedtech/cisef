@@ -12,16 +12,20 @@ useSeoMeta({
   <UContainer class="min-h-full pb-12">
     <section class="pt-12">
       <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">Contáctanos</h1>
-      <p class="text-xl mt-4">Conoce nuestra información de contacto</p>
+      <p class="text-xl mt-4 dark:text-black">Conoce nuestra información de contacto</p>
     </section>
 
     <section class="md:py-12">
       <section class="flex flex-col md:flex-row justify-between mt-8 gap-8">
         <UCard
           class="md:w-1/2"
-          :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }"
+          :ui="{
+            background: 'bg-gradient-to-br from-blue-100 to-green-100',
+            shadow: 'shadow-pinterest',
+            ring: 'dark:ring-gray-200',
+          }"
         >
-          <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-8 dark:text-black">
             <section class="flex flex-col gap-2">
               <h3 class="text-2xl font-bold">Dirección</h3>
               <p class="font-light">Francisco de Urdiñola No. 360, Saltillo, Coahuila, México. C.P. 25000.</p>
@@ -45,6 +49,7 @@ useSeoMeta({
             background: 'bg-gradient-to-br from-blue-100 to-green-100',
             body: { padding: '' },
             shadow: 'shadow-pinterest',
+            ring: 'dark:ring-gray-200',
           }"
         >
           <ClientOnly>

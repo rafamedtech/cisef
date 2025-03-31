@@ -1,41 +1,9 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v';
+import { sectors, services, benefits } from '@/lib/pageData';
+import { variants } from '@/lib/animations';
 
-const certificates = [
-  {
-    id: 1,
-    title: 'ISO 9001:2015',
-    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
-    image: '',
-  },
-  {
-    id: 2,
-    title: 'ISO 17025:2017',
-    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
-    image: '',
-  },
-  {
-    id: 3,
-    title: 'ISO 14001:2015',
-    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
-    image: '',
-  },
-  {
-    id: 4,
-    title: 'ISO 45001:2018',
-    description: 'Certificación de calidad en la prestación de servicios de diagnóstico fitosanitario.',
-    image: '',
-  },
-];
-
-const sectors = [
-  'Agricultores',
-  'Sociedades de producción rural',
-  'Empresas procesadoras de alimentos',
-  'Empresas orientadas a la industria de semillas',
-  'Importadores del sector agrícola y pecuario',
-  'Industria de los agroquímicos',
-];
+const { container, moveUp: items, moveRight } = variants;
 
 useSeoMeta({
   title: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
@@ -49,11 +17,11 @@ useSeoMeta({
 
 <template>
   <UContainer>
-    <section class="flex gap-8 md:gap-16 flex-col md:flex-row justify-between items-center min-h-[70vh] py-12">
+    <section class="flex gap-8 md:gap-16 flex-col-reverse md:flex-row justify-between items-center min-h-[70vh] py-12">
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :animate="{ x: 0, opacity: 1 }"
         :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
@@ -63,7 +31,7 @@ useSeoMeta({
         <h1 class="text-4xl md:text-6xl font-semibold text-primary leading-tight">
           Comprometidos con la sanidad vegetal y la seguridad agroalimentaria
         </h1>
-        <p class="text-lg md:text-xl">
+        <p class="text-lg md:text-xl dark:text-black">
           Brindamos servicios de diagnóstico confiables para el manejo eficiente de plagas y la calidad agroalimentaria.
         </p>
 
@@ -85,41 +53,42 @@ useSeoMeta({
       <Motion
         :initial="{
           opacity: 0,
-          y: -150,
+          y: 20,
         }"
         :animate="{ y: 0, opacity: 1 }"
         :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
       >
-        <figure class="basis-2/5">
+        <figure class="basis-2/5 relative">
           <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/Valores_gti5x1.png"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743207100/cisef/hero1_apnbpu.jpg"
             alt=""
-            class="w-full"
+            class="h-[30rem] object-cover rounded-2xl shadow-lg"
           />
         </figure>
       </Motion>
     </section>
 
-    <UDivider />
+    <UDivider :ui="{ border: { base: 'dark:border-gray-200' } }" />
 
     <section class="py-12 flex flex-col md:flex-row justify-between gap-8 items-center">
       <Motion
         :initial="{
           opacity: 0,
-          y: -150,
+          y: 20,
         }"
         :in-view="{ y: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
-        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 } }"
         class="md:w-1/3 h-full rounded-xl overflow-hidden shadow-pinterest"
         as="figure"
       >
-        <img src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/hero_vbzg9x.jpg" alt="" />
+        <img src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743207100/cisef/hero2_tdva24.jpg" alt="" />
       </Motion>
+
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
@@ -127,7 +96,7 @@ useSeoMeta({
         class="md:w-1/2"
       >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Sobre CISEF</h2>
-        <p class="text-xl mt-4">
+        <p class="text-xl mt-4 dark:text-black">
           Desde 1997, somos un laboratorio certificado por SADER que contribuye al manejo sostenible de plagas agrícolas
           y a la calidad agroalimentaria.
         </p>
@@ -147,88 +116,45 @@ useSeoMeta({
       </Motion>
     </section>
 
-    <UDivider />
+    <UDivider :ui="{ border: { base: 'dark:border-gray-200' } }" />
 
     <section class="py-12">
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
         :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
       >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Nuestros servicios</h2>
-        <p class="text-xl mt-4">Diagnósticos especializados para la sanidad y calidad agroalimentaria.</p>
+        <p class="text-xl mt-4 dark:text-black">
+          Diagnósticos especializados para la sanidad y calidad agroalimentaria.
+        </p>
       </Motion>
+
       <Motion
-        :initial="{
-          opacity: 0,
-          y: -150,
-        }"
-        :in-view="{ y: 0, opacity: 1 }"
-        :in-view-options="{ amount: 'all', once: true }"
-        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
-        class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8"
         as="section"
+        :variants="container"
+        initial="hidden"
+        in-view="visible"
+        :in-view-options="{ amount: 'some', once: true }"
+        :transition="{
+          type: 'spring',
+          delayChildren: 0.3,
+          staggerChildren: 0.2,
+        }"
+        class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8"
       >
-        <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
-          <section class="z-10 relative">
-            <h3 class="text-3xl font-bold text-gray-50">Fitosanidad</h3>
-            <p class="text-gray-100 font-light">
-              Diagnósticos precisos en virus, bacterias, hongos, nematodos, malezas e insectos para proteger tus
-              cultivos.
-            </p>
-          </section>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
-            alt=""
-            class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
+        <Motion :variants="items" v-for="service in services">
+          <ServiceCard
+            :key="service.id"
+            :title="service.title"
+            :description="service.description"
+            :image="service.image"
           />
-        </UCard>
-
-        <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
-          <section class="z-10 relative">
-            <h3 class="text-3xl font-bold text-gray-50">Inocuidad Agroalimentaria</h3>
-            <p class="text-gray-100 font-light">
-              Análisis microbiológicos que garantizan la seguridad y calidad de tus productos agroalimentarios.
-            </p>
-          </section>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
-            alt=""
-            class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
-          />
-        </UCard>
-
-        <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
-          <section class="z-10 relative">
-            <h3 class="text-3xl font-bold text-gray-50">Sanidad Acuícola y Pesquera</h3>
-            <p class="text-gray-100 font-light">
-              Análisis microbiológicos que garantizan la seguridad y calidad de tus productos agroalimentarios.
-            </p>
-          </section>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
-            alt=""
-            class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
-          />
-        </UCard>
-
-        <UCard class="relative overflow-hidden h-96 grid place-content-center p-2">
-          <section class="z-10 relative">
-            <h3 class="text-3xl font-bold text-gray-50">Calidad de la Semilla</h3>
-            <p class="text-gray-100 font-light">
-              Evaluamos la viabilidad y pureza de las semillas para asegurar cultivos de alto rendimiento.
-            </p>
-          </section>
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
-            alt=""
-            class="absolute inset-0 z-0 brightness-50 h-full object-cover w-full"
-          />
-        </UCard>
+        </Motion>
       </Motion>
 
       <Motion
@@ -236,7 +162,7 @@ useSeoMeta({
           opacity: 0,
         }"
         :in-view="{ opacity: 1 }"
-        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.7 }"
+        :transition="{ duration: 1, x: { type: 'spring', stiffness: 260, damping: 20 } }"
         class="flex justify-center mt-8"
         as="section"
       >
@@ -250,7 +176,7 @@ useSeoMeta({
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
@@ -260,42 +186,21 @@ useSeoMeta({
       </Motion>
 
       <Motion
-        :initial="{
-          opacity: 0,
-          y: -150,
+        as="section"
+        :variants="container"
+        initial="hidden"
+        in-view="visible"
+        :in-view-options="{ amount: 'some', once: true }"
+        :transition="{
+          type: 'spring',
+          delayChildren: 0.3,
+          staggerChildren: 0.2,
         }"
-        :in-view="{ y: 0, opacity: 1 }"
-        :in-view-options="{ amount: 'all', once: true }"
-        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8"
       >
-        <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
-          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-            <section class="flex flex-col gap-8 py-12">
-              <Icon name="hugeicons:certificate-01" size="64" class="text-green-500" />
-              <span class="text-2xl">Reconocimientos nacionales e internacionales</span>
-            </section>
-          </UCard>
-
-          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-            <section class="flex flex-col gap-8 py-12">
-              <Icon name="hugeicons:dashboard-speed-01" size="64" class="text-green-500" />
-              <span class="text-2xl">Resultados confiables y rápidos</span>
-            </section>
-          </UCard>
-
-          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-            <section class="flex flex-col gap-8 py-12">
-              <Icon name="hugeicons:user-check-01" size="64" class="text-green-500" />
-              <span class="text-2xl">Personal calificado y tecnología de vanguardia</span>
-            </section>
-          </UCard>
-          <UCard :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }">
-            <section class="flex flex-col gap-8 py-12">
-              <Icon name="hugeicons:checkmark-square-03" size="64" class="text-green-500" />
-              <span class="text-2xl">Transparencia e imparcialidad en los diagnósticos</span>
-            </section>
-          </UCard>
-        </section>
+        <Motion :variants="items" v-for="{ id, title, icon } in benefits">
+          <BenefitCard :key="id" :title="title" :icon="icon" />
+        </Motion>
       </Motion>
     </section>
 
@@ -303,7 +208,7 @@ useSeoMeta({
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
@@ -311,62 +216,61 @@ useSeoMeta({
         as="section"
       >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Sectores atendidos</h2>
-        <p class="text-xl mt-4">Soluciones específicas para cada área del sector agroalimentario</p>
+        <p class="text-xl mt-4 dark:text-black">Soluciones específicas para cada área del sector agroalimentario</p>
       </Motion>
 
       <Motion
-        :initial="{
-          opacity: 0,
-          y: -150,
+        :variants="container"
+        initial="hidden"
+        in-view="visible"
+        :transition="{
+          type: 'spring',
+          delayChildren: 0.3,
+          staggerChildren: 0.2,
+          delay: 0.7,
         }"
-        :in-view="{ y: 0, opacity: 1 }"
-        :in-view-options="{ amount: 'all', once: true }"
-        :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
+        :in-view-options="{ amount: 'some', once: true }"
+        class="flex justify-between items-center gap-8 py-12"
+        as="section"
       >
-        <section class="flex justify-between items-center gap-8 py-12">
+        <Motion :variants="moveRight" class="w-1/2" as="section">
           <UCard
             :ui="{
               background: '',
               ring: '',
               shadow: '',
-              base: 'w-1/2 h-full min-h-full',
+              base: 'w-full h-full min-h-full',
               body: { padding: '' },
             }"
           >
-            <p class="md:text-3xl text-xl leading-snug italic">
+            <p class="md:text-3xl text-xl leading-snug italic dark:text-black">
               En <span class="font-bold text-primary">CISEF</span>, entendemos las necesidades únicas de cada sector
               dentro de la cadena agroalimentaria.
             </p>
           </UCard>
-          <figure class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden h-full min-h-full">
-            <img
-              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
-              alt=""
-              class="object-cover min-h-full"
-            />
-            <img
-              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
-              alt=""
-              class="object-cover min-h-full"
-            />
-            <img
-              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
-              alt=""
-              class="object-cover min-h-full"
-            />
-            <img
-              src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
-              alt=""
-              class="object-cover min-h-full"
-            />
-          </figure>
-        </section>
+        </Motion>
+        <Motion
+          :variants="items"
+          class="w-1/2 grid md:grid-cols-2 rounded-xl overflow-hidden min-h-full h-full"
+          as="figure"
+        >
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743209792/cisef/sectores-home1_clk6my.jpg"
+            alt=""
+            class="object-cover"
+          />
+          <img
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743209791/cisef/sectores-home2_rth6ai.jpg"
+            alt=""
+            class="object-cover"
+          />
+        </Motion>
       </Motion>
 
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
@@ -379,39 +283,30 @@ useSeoMeta({
         <Motion
           :initial="{
             opacity: 0,
-            y: -150,
+            y: 20,
           }"
           :in-view="{ y: 0, opacity: 1 }"
           :in-view-options="{ amount: 'all', once: true }"
           :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
-          class="md:w-1/2 grid grid-cols-2 rounded-xl overflow-hidden h-full min-h-full"
+          class="md:w-1/2 grid grid-cols-2 rounded-xl overflow-hidden shadow-pinterest h-full min-h-full"
           as="figure"
         >
           <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/fitosanidad_i6vtui.jpg"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743209792/cisef/sectores-home3_qpuuft.jpg"
             alt=""
-            class="object-cover min-h-full"
+            class="object-cover"
           />
+
           <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/inocuidad_nawkiy.jpg"
+            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743209791/cisef/sectores-home4_frpkkl.jpg"
             alt=""
-            class="object-cover min-h-full"
-          />
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539669/cisef/acuicola_wjnbar.jpg"
-            alt=""
-            class="object-cover min-h-full"
-          />
-          <img
-            src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736539670/cisef/semilla_g6s7u1.jpg"
-            alt=""
-            class="object-cover min-h-full"
+            class="object-cover"
           />
         </Motion>
         <Motion
           :initial="{
             opacity: 0,
-            x: -100,
+            x: -30,
           }"
           :in-view="{ x: 0, opacity: 1 }"
           :in-view-options="{ amount: 'all', once: true }"
@@ -432,7 +327,7 @@ useSeoMeta({
                 <div class="shrink-0">
                   <Icon name="i-heroicons-check-circle" size="32" class="text-green-500" />
                 </div>
-                <span class="text-xl">{{ sector }}</span>
+                <span class="text-xl dark:text-black">{{ sector }}</span>
               </li>
             </ul>
           </UCard>
@@ -444,7 +339,7 @@ useSeoMeta({
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
@@ -452,16 +347,16 @@ useSeoMeta({
         as="section"
       >
         <h2 class="md:text-5xl text-4xl font-semibold text-primary">Nuestras Certificaciones</h2>
-        <p class="text-xl mt-4">Reconocimientos que respaldan nuestra calidad y confiabilidad</p>
+        <p class="text-xl mt-4 dark:text-black">Reconocimientos que respaldan nuestra calidad y confiabilidad</p>
       </Motion>
 
       <Motion
         :initial="{
           opacity: 0,
-          y: -150,
+          y: 20,
         }"
         :in-view="{ y: 0, opacity: 1 }"
-        :in-view-options="{ amount: 'all', once: true }"
+        :in-view-options="{ amount: 'some', once: true }"
         :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
         class="relative py-12 h-full"
         as="section"
@@ -472,10 +367,12 @@ useSeoMeta({
               background: 'bg-gradient-to-br from-blue-100 to-green-100',
               shadow: 'shadow-pinterest',
               base: 'max-w-3xl mx-auto',
+              ring: 'dark:ring-gray-200',
+              divide: 'dark:divide-gray-200',
             }"
           >
             <template #header>
-              <h3 class="md:text-3xl text-xl font-bold">Certificados nacionales e internacionales</h3>
+              <h3 class="md:text-3xl text-xl font-bold dark:text-black">Certificados nacionales e internacionales</h3>
             </template>
 
             <section class="flex flex-col md:flex-row md:justify-between gap-12">
@@ -484,21 +381,21 @@ useSeoMeta({
                 <ul class="flex flex-col gap-8 pt-4">
                   <li class="flex items-center gap-2">
                     <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
-                    <section class="flex flex-col">
+                    <section class="flex flex-col dark:text-black">
                       <span class="font-bold text-xl">Bacteriología:</span>
                       <span>LAB-260324-07-BACT-003</span>
                     </section>
                   </li>
                   <li class="flex items-center gap-2">
                     <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
-                    <section class="flex flex-col">
+                    <section class="flex flex-col dark:text-black">
                       <span class="font-bold text-xl">Micología:</span>
                       <span>LAB-260324-07-MICO-003</span>
                     </section>
                   </li>
                   <li class="flex items-center gap-2">
                     <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
-                    <section class="flex flex-col">
+                    <section class="flex flex-col dark:text-black">
                       <span class="font-bold text-xl">Entomología:</span>
                       <span>LAB-260324-07-ENTO-003</span>
                     </section>
@@ -510,14 +407,14 @@ useSeoMeta({
                 <ul class="flex flex-col gap-8 pt-4">
                   <li class="flex items-center gap-2">
                     <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
-                    <section class="flex flex-col">
+                    <section class="flex flex-col dark:text-black">
                       <span class="font-bold text-xl">Sanidad agropecuaria:</span>
                       <span>SA-096-006/09</span>
                     </section>
                   </li>
                   <li class="flex items-center gap-2">
                     <Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
-                    <section class="flex flex-col">
+                    <section class="flex flex-col dark:text-black">
                       <span class="font-bold text-xl">Alimentos:</span>
                       <span>A-1512-136/22</span>
                     </section>
@@ -527,7 +424,7 @@ useSeoMeta({
             </section>
             <section class="flex flex-col md:items-center gap-2 pt-12 md:pt-8">
               <h4 class="text-center font-bold text-primary">INTERNACIONALES</h4>
-              <span class="flex items-center gap-2"
+              <span class="flex items-center gap-2 dark:text-black"
                 ><Icon name="i-hugeicons-certificate-01" size="32" class="text-green-500" />
                 NMX-EC-17025-IMNC-2018</span
               >
@@ -554,7 +451,7 @@ useSeoMeta({
       <Motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -30,
         }"
         :in-view="{ x: 0, opacity: 1 }"
         :in-view-options="{ amount: 'all', once: true }"
@@ -566,19 +463,23 @@ useSeoMeta({
       <Motion
         :initial="{
           opacity: 0,
-          y: -150,
+          y: 20,
         }"
         :in-view="{ y: 0, opacity: 1 }"
-        :in-view-options="{ amount: 'all', once: true }"
+        :in-view-options="{ amount: 'some', once: true }"
         :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
         class="flex flex-col md:flex-row justify-between mt-8 gap-8"
         as="section"
       >
         <UCard
           class="md:w-1/2"
-          :ui="{ background: 'bg-gradient-to-br from-blue-100 to-green-100', shadow: 'shadow-pinterest' }"
+          :ui="{
+            background: 'bg-gradient-to-br from-blue-100 to-green-100',
+            shadow: 'shadow-pinterest',
+            ring: 'dark:ring-gray-200',
+          }"
         >
-          <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-8 dark:text-black">
             <section class="flex flex-col gap-2">
               <h3 class="text-2xl font-bold">Dirección</h3>
               <p class="font-light">Francisco de Urdiñola No. 360, Saltillo, Coahuila, México. C.P. 25000.</p>
@@ -602,6 +503,7 @@ useSeoMeta({
             background: 'bg-gradient-to-br from-blue-100 to-green-100',
             body: { padding: '' },
             shadow: 'shadow-pinterest',
+            ring: 'dark:ring-gray-200',
           }"
         >
           <ClientOnly>

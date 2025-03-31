@@ -18,7 +18,7 @@ function handleClick(link: any) {
 <template>
   <div class="p-4 bg-gradient-to-br from-blue-100 to-green-100 min-h-screen z-0">
     <header class="flex justify-between items-center h-24 z-20">
-      <section class="w-20 md:w-16 h-full">
+      <section class="w-16 h-full">
         <NuxtLink to="/">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
@@ -28,7 +28,7 @@ function handleClick(link: any) {
         </NuxtLink>
       </section>
       <nav class="flex md:space-x-12 items-center">
-        <ul class="space-x-12 hidden md:flex">
+        <ul class="space-x-12 hidden md:flex dark:text-black">
           <li v-for="link in links" :key="link.to">
             <NuxtLink :to="link.to" :class="link.to === $route.path ? 'text-primary underline' : ''">{{
               link.label
@@ -77,7 +77,7 @@ function handleClick(link: any) {
         </template>
 
         <nav class="h-full flex justify-center items-center">
-          <ul class="flex flex-col gap-4 items-center justify-center">
+          <ul class="flex flex-col gap-4 items-center justify-center dark:text-black">
             <li v-for="link in links" :key="link.to">
               <UButton
                 @click="handleClick(link)"
@@ -96,7 +96,7 @@ function handleClick(link: any) {
       <slot />
     </main>
 
-    <UDivider />
+    <UDivider :ui="{ border: { base: 'dark:border-gray-200' } }" />
     <UContainer class="md:py-8 pt-8">
       <footer class="flex flex-col gap-4 md:flex-row justify-between items-center md:max-h-24 md:h-24 z-20">
         <section class="w-20 md:w-16 h-24 md:h-full">
@@ -109,7 +109,7 @@ function handleClick(link: any) {
           </NuxtLink>
         </section>
         <nav>
-          <ul class="flex flex-col md:flex-row md:gap-12">
+          <ul class="flex flex-col md:flex-row md:gap-12 dark:text-black">
             <li v-for="link in links" :key="link.to">
               <NuxtLink :to="link.to" :class="{ 'text-primary underline': link.to === $route.path }">{{
                 link.label
