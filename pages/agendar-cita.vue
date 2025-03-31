@@ -50,32 +50,28 @@ useSeoMeta({
         <UCard :ui="{ background: 'dark:bg-gray-100', ring: 'dark:ring-gray-200' }">
           <UForm :state="fields">
             <div class="flex flex-col gap-4">
-              <UFormGroup label="Nombre" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
+              <UFormGroup label="Nombre" size="xl" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
-                  size="lg"
                 />
               </UFormGroup>
-              <UFormGroup label="Teléfono" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
+              <UFormGroup label="Teléfono" size="xl" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
-                  size="lg"
                 />
               </UFormGroup>
-              <UFormGroup label="Correo electrónico" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
+              <UFormGroup label="Correo electrónico" size="xl" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
-                  size="lg"
                 />
               </UFormGroup>
-              <UFormGroup label="Empresa" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
+              <UFormGroup label="Empresa" size="xl" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
-                  size="lg"
                 />
               </UFormGroup>
             </div>
