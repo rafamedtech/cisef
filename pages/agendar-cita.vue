@@ -54,24 +54,28 @@ useSeoMeta({
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
+                  size="lg"
                 />
               </UFormGroup>
               <UFormGroup label="Teléfono" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
+                  size="lg"
                 />
               </UFormGroup>
               <UFormGroup label="Correo electrónico" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
+                  size="lg"
                 />
               </UFormGroup>
               <UFormGroup label="Empresa" size="lg" :ui="{ label: { base: 'text-lg dark:text-gray-700' } }">
                 <UInput
                   placeholder="Escribe aquí"
                   :ui="{ color: { white: { outline: 'dark:bg-white dark:ring-gray-300' } } }"
+                  size="lg"
                 />
               </UFormGroup>
             </div>
