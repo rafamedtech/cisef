@@ -17,8 +17,8 @@ function handleClick(link: any) {
 
 <template>
   <div class="p-4 bg-gradient-to-br from-blue-100 to-green-100 min-h-screen z-0">
-    <header class="flex justify-between items-center h-24 z-20">
-      <section class="w-16 h-full">
+    <header class="flex justify-between items-center h-28 md:h-36 z-20">
+      <section class="w-20 md:w-24 h-full">
         <NuxtLink to="/">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1736543044/cisef/logo-removebg-preview_mn6twt.png"
