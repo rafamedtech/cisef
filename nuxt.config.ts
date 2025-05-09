@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  css: ['~/assets/css/main.css'],
   modules: ['@nuxt/ui'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -20,6 +21,4 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light',
   },
-
-  css: ['~/assets/css/main.css'],
 });
