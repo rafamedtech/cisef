@@ -30,9 +30,9 @@ function handleClick(link: any) {
       <nav class="flex md:space-x-12 items-center">
         <ul class="space-x-12 hidden md:flex dark:text-black">
           <li v-for="link in links" :key="link.to">
-            <NuxtLink :to="link.to" :class="link.to === $route.path ? 'text-primary underline' : ''">{{
-              link.label
-            }}</NuxtLink>
+            <NuxtLink :to="link.to" :class="link.to === $route.path ? 'text-primary underline' : ''">
+              {{ link.label }}
+            </NuxtLink>
           </li>
         </ul>
         <section class="flex items-center space-x-2">

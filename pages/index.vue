@@ -5,6 +5,15 @@ import { variants } from '@/lib/animations';
 
 const { container, moveUp: items, moveRight } = variants;
 
+const carouselItems = [
+  'https://picsum.photos/468/468?random=1',
+  'https://picsum.photos/468/468?random=2',
+  'https://picsum.photos/468/468?random=3',
+  'https://picsum.photos/468/468?random=4',
+  'https://picsum.photos/468/468?random=5',
+  'https://picsum.photos/468/468?random=6',
+];
+
 useSeoMeta({
   title: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
   description:
@@ -50,7 +59,7 @@ useSeoMeta({
           <UButton to="/contacto" color="green" size="lg" icon="i-heroicons-phone-arrow-down-left">Contáctanos</UButton>
         </Motion>
       </Motion>
-      <Motion
+      <!-- <Motion
         :initial="{
           opacity: 0,
           y: 20,
@@ -58,14 +67,18 @@ useSeoMeta({
         :animate="{ y: 0, opacity: 1 }"
         :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
       >
-        <figure class="basis-2/5 relative">
+         <figure class="basis-2/5 relative">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743207100/cisef/hero1_apnbpu.jpg"
             alt=""
             class="h-[30rem] object-cover rounded-2xl shadow-lg"
           />
-        </figure>
-      </Motion>
+        </figure> 
+      </Motion> -->
+      <UCarousel v-slot="{ item }" loop auto-scroll :items="carouselItems" :ui="{ item: 'basis-1/3' }">
+        <img :src="item" width="234" height="234" class="h-[30rem] object-cover rounded-2xl shadow-lg" />
+      </UCarousel>
+      <!-- <HeroCarousel /> -->
     </section>
 
     <UDivider :ui="{ border: { base: 'dark:border-gray-200' } }" />
