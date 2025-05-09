@@ -5,6 +5,16 @@ import { variants } from '@/lib/animations';
 
 const { container, moveUp: items, moveRight } = variants;
 
+const carouselItems = [
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815531/cisef/B85A2903_Medium_fvjavr.jpg',
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815531/cisef/B85A2781_Medium_c9tgor.jpg',
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815531/cisef/B85A2988_Medium_cjdale.jpg',
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815531/cisef/B85A2818_Medium_gjpl3j.jpg',
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815531/cisef/B85A2683_Medium_aga9uc.jpg',
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815531/cisef/B85A2659_Medium_dlwdp4.jpg',
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1746815532/cisef/B85A2942_Medium_ztod1x.jpg',
+];
+
 useSeoMeta({
   title: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
   description:
@@ -50,7 +60,7 @@ useSeoMeta({
           <UButton to="/contacto" color="green" size="lg" icon="i-heroicons-phone-arrow-down-left">Contáctanos</UButton>
         </Motion>
       </Motion>
-      <!-- <Motion
+      <Motion
         :initial="{
           opacity: 0,
           y: 20,
@@ -58,16 +68,15 @@ useSeoMeta({
         :animate="{ y: 0, opacity: 1 }"
         :transition="{ duration: 0.5, y: { type: 'spring', stiffness: 260, damping: 20 }, delay: 0.3 }"
       >
-         <figure class="basis-2/5 relative">
+        <HeroCarousel :items="carouselItems" />
+        <!-- <figure class="basis-2/5 relative">
           <img
             src="https://res.cloudinary.com/rafamed-dev/image/upload/v1743207100/cisef/hero1_apnbpu.jpg"
             alt=""
             class="h-[30rem] object-cover rounded-2xl shadow-lg"
           />
-        </figure> 
-      </Motion> -->
-
-      <HeroCarousel />
+        </figure>  -->
+      </Motion>
     </section>
 
     <UDivider :ui="{ border: { base: 'dark:border-gray-200' } }" />

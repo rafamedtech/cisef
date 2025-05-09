@@ -1,12 +1,9 @@
 <script setup lang="ts">
-const items = [
-  'https://picsum.photos/1920/1080?random=1',
-  'https://picsum.photos/1920/1080?random=2',
-  'https://picsum.photos/1920/1080?random=3',
-  'https://picsum.photos/1920/1080?random=4',
-  'https://picsum.photos/1920/1080?random=5',
-  'https://picsum.photos/1920/1080?random=6',
-];
+interface CarouselProps {
+  items: string[];
+}
+
+const { items } = defineProps<CarouselProps>();
 
 const carouselRef = ref();
 
@@ -19,7 +16,7 @@ onMounted(() => {
     }
 
     carouselRef.value.next();
-  }, 3000);
+  }, 2500);
 });
 </script>
 
@@ -28,10 +25,9 @@ onMounted(() => {
     ref="carouselRef"
     v-slot="{ item }"
     :items="items"
-    :ui="{ item: 'basis-1/3' }"
-    class="rounded-lg overflow-hidden"
-    indicators
+    :ui="{ item: 'basis-full' }"
+    class="rounded-lg overflow-hidden max-w-[20rem] mx-auto"
   >
-    <img :src="item" class="h-[30rem] object-cover rounded-2xl shadow-lg w-full" draggable="false" />
+    <img :src="item" class="h-[30rem] object-cover rounded-2xl w-full" draggable="false" />
   </UCarousel>
 </template>
