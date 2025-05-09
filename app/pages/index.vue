@@ -5,15 +5,6 @@ import { variants } from '@/lib/animations';
 
 const { container, moveUp: items, moveRight } = variants;
 
-const carouselItems = [
-  'https://picsum.photos/468/468?random=1',
-  'https://picsum.photos/468/468?random=2',
-  'https://picsum.photos/468/468?random=3',
-  'https://picsum.photos/468/468?random=4',
-  'https://picsum.photos/468/468?random=5',
-  'https://picsum.photos/468/468?random=6',
-];
-
 useSeoMeta({
   title: 'CISEF - Centro de Investigación y Servicios en Fitosanidad',
   description:
@@ -75,10 +66,8 @@ useSeoMeta({
           />
         </figure> 
       </Motion> -->
-      <UCarousel v-slot="{ item }" loop auto-scroll :items="carouselItems" :ui="{ item: 'basis-1/3' }">
-        <img :src="item" width="234" height="234" class="h-[30rem] object-cover rounded-2xl shadow-lg" />
-      </UCarousel>
-      <!-- <HeroCarousel /> -->
+
+      <HeroCarousel />
     </section>
 
     <UDivider :ui="{ border: { base: 'dark:border-gray-200' } }" />

@@ -19,21 +19,19 @@ onMounted(() => {
     }
 
     carouselRef.value.next();
-  }, 1000);
+  }, 3000);
 });
 </script>
 
 <template>
-  <ClientOnly>
-    <UCarousel
-      ref="carouselRef"
-      v-slot="{ item }"
-      :items="items"
-      :ui="{ item: 'basis-full' }"
-      class="rounded-lg overflow-hidden"
-      indicators
-    >
-      <img :src="item" class="w-full" draggable="false" />
-    </UCarousel>
-  </ClientOnly>
+  <UCarousel
+    ref="carouselRef"
+    v-slot="{ item }"
+    :items="items"
+    :ui="{ item: 'basis-1/3' }"
+    class="rounded-lg overflow-hidden"
+    indicators
+  >
+    <img :src="item" class="h-[30rem] object-cover rounded-2xl shadow-lg w-full" draggable="false" />
+  </UCarousel>
 </template>
